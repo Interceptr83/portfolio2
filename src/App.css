@@ -1,0 +1,11 @@
+
+.heroImg {
+  min-height:100vh;
+  background-color:black;
+  background-image: url("./assets/images/wallpaperbetter\ \(2\).jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+

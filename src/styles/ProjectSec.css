@@ -1,0 +1,232 @@
+
+.project_container {
+  display:grid;
+  place-items: center;
+  max-width: 100%;
+  margin: 0px 50px 0px 50px;
+}
+
+.content {
+    height:75vh;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    place-self: center;
+}
+
+.prog_grid_1 {
+    text-align: center;
+    justify-items: left;
+    margin: 20px 100px 20px 100px;
+    padding: 4rem;
+}
+.glass-item-2 {
+    display: block;
+    text-align: center;
+    justify-items: left;
+    align-items: center;
+    backdrop-filter: blur(20px); 
+    border-radius: 30px;
+    box-shadow: 3px 3px 15px;
+    transform: rotateY(-20deg);
+    /* padding: 4rem; */
+}
+
+.card-content-outer {
+  display:grid;
+  height:100%;
+  width: 100%;
+}
+
+.card-content-inner {
+  place-content: center;
+}
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+    width: 500px;
+    height: 200px;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  }
+  
+  /* This container is needed to position the front and back side */
+  .flip-card-inner { 
+    /* backdrop-filter: blur(5px);  */
+    border-radius: 30px;
+    box-shadow: 3px 3px 15px;
+    position: relative;
+    width: 500px;
+    height: 200px;
+    text-align: center;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card:hover .flip-card-inner {
+    /* backdrop-filter: blur(5px);  */
+    transform: rotatex(180deg); 
+  }
+  
+  /* Position the front and back side */
+  /* .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 500px;
+    height: 200px;
+    -webkit-backface-visibility: hidden; Safari
+    backface-visibility: hidden;
+  } */
+  
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front {
+    backdrop-filter: blur(10px); 
+    border-radius: 30px;
+    box-shadow: 3px 3px 15px;
+    position: absolute;
+    width: 500px;
+    height: 200px;
+    color: black;
+    backface-visibility: hidden;
+  }
+  
+  /* Style the back side */
+  .flip-card-back {
+    backdrop-filter: blur(10px); 
+    border-radius: 30px;
+    box-shadow: 3px 3px 15px;
+    position: absolute;
+    width: 500px;
+    height: 200px;
+    /* background-color: white; */
+    transform: rotatex(180deg);
+    backface-visibility: hidden;
+  }
+
+
+
+
+
+
+
+  :root {
+    --level-one: translateZ(3rem);
+    --level-two: translateZ(6rem);
+    --level-three: translateZ(9rem);
+    
+    --fw-normal: 400;
+    --fw-bold: 700;
+    
+    --clr: #cacaca;
+  }
+  
+  *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+  }
+  
+  .card {
+    width: 30rem;
+  }
+  
+  .card__content {
+    border-radius: 30px;
+    border-style: solid;
+    border: 5px;
+    box-shadow: 3px 3px 15px;
+    text-align: center;
+    position: relative;
+    padding: 10em 5em;
+    transition: transform 2s;
+    transform-style: preserve-3d;
+  }
+  
+  .card:hover .card__content {
+    transform: rotateY(.5turn);
+  }
+  
+  .card__front,
+  .card__back {
+    border-radius: 30px;
+    box-shadow: 3px 3px 15px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 5em 3em;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    display: grid;
+    align-content: center;
+  }
+  
+  .card__front {
+    background-color: var(--clr);
+    background-image: url(../assets/images/projectcardbg.png);
+    background-size: cover;
+    background-blend-mode: overlay;
+    color: #111;
+  }
+  
+  .card__front::before {
+    content: '';
+    position: absolute;
+    --spacer: 1em;
+    top: var(--spacer);
+    bottom: var(--spacer);
+    left: var(--spacer);
+    right: var(--spacer);
+    border: 3px solid currentColor;
+    border-radius: 30px;
+    transform: var(--level-one);
+  }
+  
+  .card__title {
+    font-size: 2rem;
+    transform: var(--level-three);
+    order: 2;
+    color:white;
+    -webkit-text-stroke: 2px black;
+    text-transform: uppercase;
+  }
+  
+  .card__subtitle {
+    transform: var(--level-two);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: .75rem;
+    font-weight: var(--fw-bold);
+    /* opacity: .7; */
+    place-self: center;
+  }
+  
+  .card__body {
+    transform: var(--level-two);
+    font-weight: var(fw-normal);
+    font-size: 1.5rem;
+    line-height: 1.6;
+  }
+  
+  
+  
+  .card__back {
+    transform: rotateY(.5turn);
+    color: var(--clr);
+    /* background: #888; */
+    background-color: var(--clr);
+    background-image: url(../assets/images/projectcardbg.png);
+    background-size: cover;
+    background-blend-mode: overlay;
+    color:white;
+    -webkit-text-stroke: 2px black;
+  }
+
+  a {
+    font-size: 1rem;
+    color: black;
+    text-decoration: underline;
+  }
+  
+  
+  
+

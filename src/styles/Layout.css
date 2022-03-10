@@ -1,0 +1,58 @@
+.heroImg {
+  min-height:100vh;
+  background-color:black;
+  background-image: url("../assets/images/wallpaperbetter\ \(2\).jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header {
+  background-color:black;
+  color: white;
+  height:15vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+ 
+.header-title {
+  text-align: center;
+}
+
+.header-nav {
+  justify-content: space-around;
+  text-align: center;
+  vertical-align: text-bottom;
+  /* margin-top: 5rem;
+  margin-right: 10rem; */
+
+}
+
+header h1{
+  font-size: 3rem;
+  padding-top:2.5rem;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav ul li {
+  font-size: 1.5rem;
+  display: inline-block;
+  margin-left: 25px;
+}
+
+.stuff {
+  height: 75vh;
+}
+
+footer {
+  background-color:black;
+  color:white;
+  height:10vh;
+}
+
+nav a {
+  color: white;
+  font-size: 1.5rem;
+}

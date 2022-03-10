@@ -1,0 +1,27 @@
+.resContentSec {
+    height:75vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+  }
+
+.resGlass {
+    height:70vh;
+    width: 40vw;
+    grid-column: 1/2;
+    display: inline-block;
+    /* text-align: center; */
+    justify-items: center;
+    align-items: center;
+    margin: auto auto auto auto;
+    backdrop-filter: blur(20px); 
+    border-radius: 30px;
+    box-shadow: 3px 3px 15px;
+    transform: rotateY(-20deg);
+    padding: 4rem;
+    overflow-y:auto
+  }
+  img {
+    float: left; 
+    margin: 5px;
+}

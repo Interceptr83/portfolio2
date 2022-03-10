@@ -1,0 +1,44 @@
+
+  .contContentSec {
+    height:75vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+  }
+
+.contGlass2 {
+    height:70vh;
+    width: 40vw;
+    grid-column: 1/2;
+    display: inline-block;
+    text-align: center;
+    justify-items: center;
+    align-items: center;
+    margin: auto auto auto auto;
+    backdrop-filter: blur(20px); 
+    border-radius: 30px;
+    box-shadow: 3px 3px 15px;
+    transform: rotateY(-20deg);
+    padding: 4rem;
+  }
+
+  .contactContent {
+      display: grid;
+      gap: 2rem;
+      grid-template-rows: 1fr 1fr;
+      place-items: center;
+
+  }
+
+  .contactLinks {
+    grid-row:1/2;
+    text-align: left;
+  }
+
+  .contactForm {
+      text-align: center;
+  }
+
+  .contactForm label{
+      font-weight: bold;
+  }
